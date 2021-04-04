@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_60918ae2fbf44397ac8db53ee37960ed {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_60918ae2fbf44397ac8db53ee37960ed" ></div>
+        
+</body>
+<script>    
+    
+            var map_60918ae2fbf44397ac8db53ee37960ed = L.map(
+                "map_60918ae2fbf44397ac8db53ee37960ed",
+                {
+                    center: [59.928522, 10.715429],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_274796ad3ca74280aa09d4a89d3b3863 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_60918ae2fbf44397ac8db53ee37960ed);
+        
+    
+
+        function geo_json_b67f9cd38e1549139c81a0f63469890f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b67f9cd38e1549139c81a0f63469890f = L.geoJson(null, {
+                onEachFeature: geo_json_b67f9cd38e1549139c81a0f63469890f_onEachFeature,
+            
+        });
+
+        function geo_json_b67f9cd38e1549139c81a0f63469890f_add (data) {
+            geo_json_b67f9cd38e1549139c81a0f63469890f
+                .addData(data)
+                .addTo(map_60918ae2fbf44397ac8db53ee37960ed);
+        }
+            geo_json_b67f9cd38e1549139c81a0f63469890f_add({"features": [{"geometry": {"coordinates": [[[28.98102869781608, 70.40654567205839], [29.05203385716056, 70.40827787410187], [29.104800638721255, 70.45068388972778], [29.225989539240718, 70.47779029736202], [29.315419705216318, 70.44743060794087], [29.451287667707405, 70.42638032882047], [29.577603286796652, 70.37519420130809], [29.66799993215077, 70.36360350079293], [29.595268611597493, 70.33938821996134], [29.734578845832658, 70.32759555520238], [29.860840403226074, 70.32533594392712], [29.986547274198546, 70.31220731282299], [30.07435818144902, 70.29642985428052], [30.460266240614455, 70.20902914724454], [30.45780355432122, 70.1945758204335], [30.93274468391846, 70.0284168442718], [30.611112061577916, 69.98563411441677], [30.05451501542939, 69.9750437494535], [29.344409203568716, 70.06425927462703], [29.24163137955108, 70.07114266645691], [29.150151507449394, 70.0868920941448], [29.210364005172547, 70.12561957998751], [29.216928704722033, 70.14707098786049], [29.185392810319524, 70.16290762641707], [29.188437150802272, 70.23053696329504], [29.217271576555998, 70.23425684524673], [29.254610628912104, 70.26832118149186], [29.287445022886306, 70.31743499969596], [29.277148671243367, 70.37185657180807], [29.095607530150343, 70.37851366751612], [28.98102869781608, 70.40654567205839]]], "type": "Polygon"}, "properties": {"datafangstdato": null, "datauttaksdato": "20191220110340", "kommunenummer": "5405", "lokalid": "172718", "navn": [{"navn": "Vads\u00c3\u00b8", "rekkefolge": "", "sprak": "nor"}], "navnerom": "http://skjema.geonorge.no/SOSI/produktspesifikasjon/AdmEnheter/4.1", "objtype": "Kommune", "oppdateringsdato": null, "opphav": null, "samiskforvaltningsomrade": false, "versjonid": "4.1"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_b67f9cd38e1549139c81a0f63469890f.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["navn"];
+    let aliases = ["navn"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+            var layer_control_e058919373484653bb3eb51ad53fd427 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_274796ad3ca74280aa09d4a89d3b3863,
+                },
+                overlays :  {
+                    "macro_element_b67f9cd38e1549139c81a0f63469890f" : geo_json_b67f9cd38e1549139c81a0f63469890f,
+                },
+            };
+            L.control.layers(
+                layer_control_e058919373484653bb3eb51ad53fd427.base_layers,
+                layer_control_e058919373484653bb3eb51ad53fd427.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_60918ae2fbf44397ac8db53ee37960ed);
+        
+</script>
